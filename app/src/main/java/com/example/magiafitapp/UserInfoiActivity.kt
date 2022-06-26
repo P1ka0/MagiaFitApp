@@ -1,5 +1,6 @@
 package com.example.magiafitapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +20,8 @@ class UserInfoiActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUserInfoiBinding
 
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityUserInfoiBinding.inflate(layoutInflater)
@@ -31,10 +34,16 @@ class UserInfoiActivity : AppCompatActivity() {
 
         binding.readdataBtn.setOnClickListener {
             val user : String = binding.etusername.text.toString()
+            val email : String = binding.etusername.text.toString()
             // val userId : String
             if(user.isNotEmpty()){
                 readData(user)
             }
+        }
+
+        binding.allusersBtn.setOnClickListener {
+
+            startActivity(Intent(this,RecyclerViewActivity::class.java))
         }
 
 

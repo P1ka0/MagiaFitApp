@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
         <activity
+            android:name=".RecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FetchDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserRetrieveActivity"
+            android:exported="false" />
+        <activity
             android:name=".RetrievePDF"
             android:exported="false" />
         <activity

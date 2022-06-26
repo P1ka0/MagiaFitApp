@@ -43,6 +43,7 @@
         <entry key="app/src/main/res/layout/activity_dash_board_user.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_dashboard_admin.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_download_pdf.xml" value="0.31431159420289856" />
+        <entry key="app/src/main/res/layout/activity_fetch_data.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_files_upload.xml" value="0.28854166666666664" />
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.29483695652173914" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.37604166666666666" />
@@ -55,6 +56,7 @@
         <entry key="app/src/main/res/layout/activity_pdf_add.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/activity_peso.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_read_data.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/activity_recycler_view.xml" value="0.17477203647416414" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.290519877675841" />
         <entry key="app/src/main/res/layout/activity_reservas.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_retrieve_pdf.xml" value="0.18161094224924013" />
@@ -70,6 +72,7 @@
         <entry key="app/src/main/res/layout/activity_user_list.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/activity_user_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_user_register.xml" value="0.27447916666666666" />
+        <entry key="app/src/main/res/layout/activity_user_retrieve.xml" value="0.20833333333333334" />
         <entry key="app/src/main/res/layout/activity_users_info.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/app_bar_land.xml" value="0.1828774062816616" />
         <entry key="app/src/main/res/layout/conten_main.xml" value="0.27447916666666666" />
@@ -78,6 +81,7 @@
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.1828774062816616" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1828774062816616" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.1828774062816616" />
+        <entry key="app/src/main/res/layout/list_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/lista_actividades1.xml" value="0.1276595744680851" />
         <entry key="app/src/main/res/layout/menu_header.xml" value="0.2708333333333333" />
         <entry key="app/src/main/res/layout/nav_header_land.xml" value="0.1828774062816616" />

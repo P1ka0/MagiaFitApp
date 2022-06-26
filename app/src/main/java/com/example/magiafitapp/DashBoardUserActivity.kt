@@ -26,10 +26,8 @@ class DashBoardUserActivity : AppCompatActivity(){
     private lateinit var database: FirebaseDatabase
     private lateinit var dialog: AlertDialog.Builder
     private lateinit var storage: FirebaseStorage
-   // private lateinit var selectedImg : Uri
     private lateinit var storageRef : StorageReference
     lateinit var filepath : Uri
-
 
     //Funcion principal de la Clase
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -211,27 +209,20 @@ class DashBoardUserActivity : AppCompatActivity(){
             auth.signOut()
             finish()
             startActivity(Intent(this, LoginActivity::class.java))
-
         }
 
         binding.reservasBtn.setOnClickListener {
-
             val intent : Intent = Intent(this,BookerActivity::class.java)
             intent.putExtra("Nombre",userid)
             startActivity(intent)
-
-
         }
 
         binding.userPdfUp.setOnClickListener {
             val intent : Intent = Intent(this,uploadPdfActivity::class.java)
             intent.putExtra("Nombre",userid)
             startActivity(intent)
-
         }
-
     }
-
     //-----------------Fin Funcion del boton que llama Activities--------------------//
 }
 

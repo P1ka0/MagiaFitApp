@@ -6,35 +6,35 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Patterns
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.magiafitapp.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ktx.database
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.StorageReference
 
 class RegisterActivity : AppCompatActivity() {
 
-    //View Binding
+
     private lateinit var binding: ActivityRegisterBinding
-
-    //Firebase Auth
     private lateinit var firebaseAuth: FirebaseAuth
-
-    //Progress Dialog
     private lateinit var progressDialog: ProgressDialog
-
-
     private lateinit var storageRef : StorageReference
-
-    // private var pdfUri: Uri? = null
+    private lateinit var progressBar: ProgressBar
+    private lateinit var database: DatabaseReference
+    private var db = Firebase.firestore
     lateinit var filepath : Uri
-
-    //TAG
     private val TAG = "PDF_ADD_TAG"
 
+
     //Variable donde guardamos la referencia a la BD
-    var database = FirebaseDatabase.getInstance().reference
+    //var database = FirebaseDatabase.getInstance().reference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +44,10 @@ class RegisterActivity : AppCompatActivity() {
         //Iniciar Firebase Auth
         firebaseAuth = FirebaseAuth.getInstance()
 
+        //Inicializamos el firebase auth
+        firebaseAuth = Firebase.auth
+
+        database = Firebase.database.reference
 
         //Iniciar el progress dialog y mostrar la creacion de usuario o registro
         progressDialog = ProgressDialog(this)
@@ -199,6 +203,25 @@ class RegisterActivity : AppCompatActivity() {
                 progressDialog.dismiss()
                 Toast.makeText(this, "Fallo al guardar los datos usuario",Toast.LENGTH_SHORT).show()
             }
+
+        val userMap = hashMapOf(
+            "Nombre" to name,
+            "Apellido" to surname,
+            "Direccion" to address
+         )
+
+        val userId = FirebaseAuth.getInstance().currentUser!!.uid
+
+        db.collection("User").document(userId).set(userMap)
+            .addOnSuccessListener {
+                Toast.makeText(this, "Datos subidos con exito",Toast.LENGTH_SHORT).show()
+
+
+            }.addOnFailureListener {
+                Toast.makeText(this, "Fallo al guardar los datos usuario",Toast.LENGTH_SHORT).show()
+            }
+
+
     }
 }
 
