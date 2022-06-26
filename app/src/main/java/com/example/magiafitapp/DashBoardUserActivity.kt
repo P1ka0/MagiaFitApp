@@ -1,8 +1,12 @@
 package com.example.magiafitapp
 
+import android.app.Activity
+import android.app.ProgressDialog
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -12,7 +16,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import java.util.*
+import java.io.File
 
 
 class DashBoardUserActivity : AppCompatActivity(){
@@ -22,14 +26,17 @@ class DashBoardUserActivity : AppCompatActivity(){
     private lateinit var database: FirebaseDatabase
     private lateinit var dialog: AlertDialog.Builder
     private lateinit var storage: FirebaseStorage
-    private lateinit var selectedImg : Uri
+   // private lateinit var selectedImg : Uri
     private lateinit var storageRef : StorageReference
+    lateinit var filepath : Uri
+
 
     //Funcion principal de la Clase
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDashBoardUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         //-----------------LLamada al id Usuario--------------------//
         val objetoIntent: Intent = intent
@@ -43,14 +50,13 @@ class DashBoardUserActivity : AppCompatActivity(){
         subtitle.text = userid
         //-----------------Fin LLamada al id Usuario--------------------//
 
+
         //Inicio de Firebase Auth
         auth = FirebaseAuth.getInstance()
 
         //LLamada funcion de los botones y se pasa el parametro del id
         ButtonsSetup(userid)
 
-        //Funcion para elegir o hacer foto
-        PickImageBtn()
 
         //Dialogo de alerta
         dialog = AlertDialog.Builder(this)
@@ -61,88 +67,114 @@ class DashBoardUserActivity : AppCompatActivity(){
         storage = FirebaseStorage.getInstance()
         auth = FirebaseAuth.getInstance()
 
+        //Funcion que carga la imagen de ususario
+        userProfileImage(userid)
 
-        //----------Funcion que recupera imagen de perfil----------//
-        profileImageRecover()
-
-
-
-    }
-
-    private fun profileImageRecover(){
-
-        val storageRef = FirebaseStorage.getInstance().reference.child("ProfileImg").child("riki123")
+        //Selector de Perfil
+        PickImageBtn()
 
     }
-
+    
+    //----------Funcion para seleccionar foto de perfil----------//
 
     private fun PickImageBtn(){
-        binding.profileImg.setOnClickListener{
+        binding.userphoto.setOnClickListener{
             val dialog = AlertDialog.Builder(this)
                 .setTitle("Elige una opcion")
                 .setMessage("Puede escoger una foto o hacerte una para tu perfil")
                 .setNegativeButton("CANCELAR"){view, _->
                     view.dismiss()
                 }
-                .setPositiveButton("ELEGIR FOTO"){view,_ ->
-                    Toast.makeText(this,"Has escogido elegir foto",Toast.LENGTH_SHORT).show()
-                   //fileManager();
-                    choosePhoto()
-                    view.dismiss()
-                }
 
+                .setPositiveButton("ELEGIR FOTO"){view,_ ->
+                    startFileChooser()
+                    Toast.makeText(this,"Has escogido elegir foto", Toast.LENGTH_SHORT).show()
+                }
                 .setCancelable(false)
                 .create()
             dialog.show()
         }
-
     }
 
-//-----------------------------Elegir Foto y subirla a Firebase---------------------//
-    private fun choosePhoto(){
-        val intent = Intent()
-        intent.action = Intent.ACTION_GET_CONTENT
-        intent.type = "image/*"
-        startActivityForResult(intent, 1)
+    //--------------------UploadImage Function------------------------------//
+
+
+    private fun startFileChooser() {
+        var i = Intent()
+        i.setType("image/*")
+        i.setAction(Intent.ACTION_GET_CONTENT)
+        startActivityForResult(Intent.createChooser(i, "Elige una foto"),111)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (data != null){
-            if (data.data != null){
-                selectedImg = data.data!!
-
-                binding.profileImg.setImageURI(selectedImg)
-
-                uploadData(userid = "riki123")
-            }
+        if (requestCode==111 && resultCode == Activity.RESULT_OK && data != null){
+            filepath = data.data!!
+            var bitmap = MediaStore.Images.Media.getBitmap(contentResolver, filepath)
+            binding.userphoto.setImageBitmap(bitmap)
+            uploadFile(userid = "riki123")
         }
     }
 
-    private fun uploadData(userid: String){
-        val reference = storage.reference.child("Profile Img").child("$userid").child(Date().time.toString())
-        reference.putFile(selectedImg).addOnCompleteListener {
-            if (it.isSuccessful){
-                reference.downloadUrl.addOnSuccessListener { task ->
-                    uploadInfo(task.toString())
+    private fun uploadFile(userid: String) {
+
+        if (filepath != null){
+            val pd = ProgressDialog(this)
+            pd.setTitle("Uploading")
+            pd.show()
+
+            var imageRef = FirebaseStorage.getInstance().reference.child("Users").child("$userid").child("ProfileImage/pic.jpg")
+            imageRef.putFile(filepath)
+                .addOnSuccessListener {p0 ->
+                    pd.dismiss()
+                    Toast.makeText(applicationContext, "Archivo subido con exito!", Toast.LENGTH_SHORT).show()
                 }
-            }
+                .addOnFailureListener{p0 ->
+                    pd.dismiss()
+
+                    Toast.makeText(applicationContext, p0.message, Toast.LENGTH_SHORT).show()
+                }
+                .addOnProgressListener {p0 ->
+                    var progress : Double = (100.0 * p0.bytesTransferred) / p0.totalByteCount
+                    pd.setMessage("Uplodaded ${progress.toInt()}%")
+                }
         }
     }
 
-    private fun uploadInfo(imgUrl: String){
-        val user = UserModel(imgUrl)
 
-        database.reference.child("users")
-            .child(auth.uid.toString())
-            .setValue(user)
-            .addOnSuccessListener {
-                Toast.makeText(this, "imagen subida", Toast.LENGTH_SHORT).show()
-            }
+
+    //-------------------------User profile photo GET--------------------------------//
+
+    private fun userProfileImage(userid: String){
+
+        val progressDialog = ProgressDialog(this)
+        progressDialog.setMessage("Cargando Perfil...")
+        progressDialog.setCancelable(false)
+        progressDialog.show()
+
+        //val imageName = binding.etimageId.text.toString()
+        val storageRef = FirebaseStorage.getInstance().reference.child("Users").child("$userid").child("ProfileImage/pic.jpg")
+
+        val localFile = File.createTempFile("tempImage","jpg")
+        storageRef.getFile(localFile).addOnSuccessListener {
+
+            if (progressDialog.isShowing)
+                progressDialog.dismiss()
+
+            val bitmap = BitmapFactory.decodeFile(localFile.absolutePath)
+            binding.userphoto.setImageBitmap(bitmap)
+
+        }.addOnFailureListener{
+
+            if (progressDialog.isShowing)
+                progressDialog.dismiss()
+
+            Toast.makeText(this,"Fallo al cargar la imagen desde la base de datos",Toast.LENGTH_SHORT).show()
+        }
     }
 
-   //-----------------------------Fin Elegir Foto y subirla a Firebase---------------------//
+    //-------------------------END User profile GET--------------------------------//
 
     //-----------------Funcion del boton que llama Activities--------------------//
     private fun ButtonsSetup(userid: String) {

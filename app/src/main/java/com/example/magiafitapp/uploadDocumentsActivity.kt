@@ -22,7 +22,6 @@ class uploadDocumentsActivity : AppCompatActivity() {
         binding = ActivityUploadDocumentsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         binding.button.setOnClickListener {
             startFileChooser()
         }
@@ -31,10 +30,7 @@ class uploadDocumentsActivity : AppCompatActivity() {
 
             uploadFile()
         }
-
     }
-
-
 
     private fun startFileChooser() {
         var i = Intent()
@@ -49,8 +45,6 @@ class uploadDocumentsActivity : AppCompatActivity() {
             filepath = data.data!!
             var bitmap = MediaStore.Images.Media.getBitmap(contentResolver, filepath)
             binding.imageView.setImageBitmap(bitmap)
-
-
         }
     }
 
