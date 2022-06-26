@@ -107,24 +107,32 @@ class DashboardAdminActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
+        val objetoIntent: Intent = intent
+        val Nombre = objetoIntent.getStringExtra("Nombre")
 
+        val subtitle = findViewById<TextView>(R.id.subTitleTv)
+        subtitle.text = "$Nombre"
+
+        //Enviamos el user a las otras Activities
+        val useride = "$Nombre"
+        subtitle.text = useride
 
         if (requestCode==111 && resultCode == Activity.RESULT_OK && data != null){
             filepath = data.data!!
             var bitmap = MediaStore.Images.Media.getBitmap(contentResolver, filepath)
             binding.userphoto.setImageBitmap(bitmap)
-            uploadFile(userid = "riki123")
+            uploadFile(useride)
         }
     }
 
-    private fun uploadFile(userid: String) {
+    private fun uploadFile(useride: String) {
 
         if (filepath != null){
             val pd = ProgressDialog(this)
             pd.setTitle("Uploading")
             pd.show()
 
-            var imageRef = FirebaseStorage.getInstance().reference.child("Users").child("$userid").child("ProfileImage/pic.jpg")
+            var imageRef = FirebaseStorage.getInstance().reference.child("Users").child("$useride").child("ProfileImage/pic.jpg")
             imageRef.putFile(filepath)
                 .addOnSuccessListener {p0 ->
                     pd.dismiss()
