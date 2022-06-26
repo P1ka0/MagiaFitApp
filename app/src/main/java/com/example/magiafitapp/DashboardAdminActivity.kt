@@ -192,8 +192,8 @@ class DashboardAdminActivity : AppCompatActivity() {
 
         //Boton de cerrar sesion
         binding.logoutBtn.setOnClickListener {
-            firebaseAuth.signOut()
-
+            firebaseAuth.signOut() //Cerramos la sesion desde firebase
+            finish() //Cerramos el Activity
             startActivity(Intent(this, LoginActivity::class.java))
 
         }
