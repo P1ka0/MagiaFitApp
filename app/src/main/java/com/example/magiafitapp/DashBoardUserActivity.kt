@@ -46,7 +46,7 @@ class DashBoardUserActivity : AppCompatActivity(){
         subtitle.text = "$Nombre"
 
         //Enviamos el user a las otras Activities
-        val userid = "$Nombre"
+         val userid = "$Nombre"
         subtitle.text = userid
         //-----------------Fin LLamada al id Usuario--------------------//
 
@@ -74,7 +74,7 @@ class DashBoardUserActivity : AppCompatActivity(){
         PickImageBtn()
 
     }
-    
+
     //----------Funcion para seleccionar foto de perfil----------//
 
     private fun PickImageBtn(){
@@ -108,6 +108,8 @@ class DashBoardUserActivity : AppCompatActivity(){
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+
+
 
         if (requestCode==111 && resultCode == Activity.RESULT_OK && data != null){
             filepath = data.data!!
