@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/BlueScreem"
+    tools:context=".UserInfoiActivity">
+
+    <!--Toolbar-->
+    <LinearLayout
+        android:id="@+id/toolbarTL"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:padding="18dp"
+            android:src="@drawable/ic_back_white" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etusername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarTL"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/splash_edittext01"
+        android:inputType="textPersonName|textCapWords"
+        android:drawableStart="@drawable/ic_search_gray"
+        android:drawablePadding="10dp"
+        android:hint="Buscar Usuario"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray01" />
+
+
+    <TextView
+        android:id="@+id/userId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etusername"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="45dp"
+        android:drawableStart="@drawable/ic_person_gray"
+        android:background="@drawable/splash_edittext01"
+        android:hint="ID: "
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/tvfirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userId"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="45dp"
+        android:drawableStart="@drawable/ic_person_gray"
+        android:background="@drawable/splash_edittext01"
+        android:hint="Nombre: "
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/tvsurName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvfirstName"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="45dp"
+        android:drawableStart="@drawable/ic_person2_grey"
+        android:background="@drawable/splash_edittext01"
+        android:hint="Apellido: "
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/userPhoneTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvsurName"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="45dp"
+        android:drawableStart="@drawable/ic_phone_grey"
+        android:background="@drawable/splash_edittext01"
+        android:hint="Teléfono: "
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/userAddresTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userPhoneTv"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="45dp"
+        android:background="@drawable/splash_edittext01"
+        android:drawableStart="@drawable/ic_location_grey"
+        android:hint="Dirección: "
+        android:padding="5dp" />
+
+    <Button
+        android:id="@+id/readdataBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userPhoneTv"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="95dp"
+        android:background="@drawable/button_bg"
+        android:text="Recuperar por Nombre"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/allusersBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userPhoneTv"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="95dp"
+        android:background="@drawable/button_bg"
+        android:text="Recuperar todos "
+        android:textColor="@color/white" />
+
+
+</RelativeLayout>

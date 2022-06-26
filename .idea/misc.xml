@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/background.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable/btn_bg.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable/button_bg.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable/curvedback.xml" value="0.2869791666666667" />
+        <entry key="app/src/main/res/drawable/edit_bg.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable/header_bg.xml" value="0.3765625" />
+        <entry key="app/src/main/res/drawable/homeicon.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/ic_baseline_house_24.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/ic_crono_icon.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable/ic_draw_gray.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable/ic_imc_icon.xml" value="0.2869791666666667" />
+        <entry key="app/src/main/res/drawable/ic_lock_gray.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable/ic_menu_camera.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/ic_menu_gallery.xml" value="0.33541666666666664" />
+        <entry key="app/src/main/res/drawable/ic_person_black.xml" value="0.3765625" />
+        <entry key="app/src/main/res/drawable/ic_reservas_black.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable/ic_rutine_icon.xml" value="0.275" />
+        <entry key="app/src/main/res/drawable/ic_setup_icon.xml" value="0.275" />
+        <entry key="app/src/main/res/drawable/ic_timer_icon.xml" value="0.275" />
+        <entry key="app/src/main/res/drawable/lockicon.xml" value="0.275" />
+        <entry key="app/src/main/res/drawable/login_bg.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable/profileicon.xml" value="0.2869791666666667" />
+        <entry key="app/src/main/res/drawable/shape_button03.xml" value="0.3648148148148148" />
+        <entry key="app/src/main/res/drawable/shape_toolbar01.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable/shape_toolbar_02.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable/splash_edittext01.xml" value="0.3921875" />
+        <entry key="app/src/main/res/layout/activity_admin_check_reservas.xml" value="0.3609375" />
+        <entry key="app/src/main/res/layout/activity_admin_docs_download.xml" value="0.2916666666666667" />
+        <entry key="app/src/main/res/layout/activity_apointment.xml" value="0.31431159420289856" />
+        <entry key="app/src/main/res/layout/activity_auth.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_booker.xml" value="0.24444444444444444" />
+        <entry key="app/src/main/res/layout/activity_category_add.xml" value="0.28854166666666664" />
+        <entry key="app/src/main/res/layout/activity_category_nop.xml" value="0.28854166666666664" />
+        <entry key="app/src/main/res/layout/activity_circule_test.xml" value="0.18840579710144928" />
+        <entry key="app/src/main/res/layout/activity_create_add.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_crono.xml" value="0.2708333333333333" />
+        <entry key="app/src/main/res/layout/activity_dash_board_user.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_dashboard_admin.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_download_pdf.xml" value="0.31431159420289856" />
+        <entry key="app/src/main/res/layout/activity_files_upload.xml" value="0.28854166666666664" />
+        <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.29483695652173914" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/activity_imc_calculator.xml" value="0.25885416666666666" />
+        <entry key="app/src/main/res/layout/activity_info_set_get.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/activity_land.xml" value="0.1828774062816616" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_login2.xml" value="0.1828774062816616" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2708333333333333" />
+        <entry key="app/src/main/res/layout/activity_pdf_add.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/activity_peso.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_read_data.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.290519877675841" />
+        <entry key="app/src/main/res/layout/activity_reservas.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_rutine.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/activity_section_add.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.35097493036211697" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/activity_subir_archivos_pdf.xml" value="0.28854166666666664" />
+        <entry key="app/src/main/res/layout/activity_upload_data_admin.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/activity_upload_documents.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/activity_upload_pdf.xml" value="0.31527093596059114" />
+        <entry key="app/src/main/res/layout/activity_user_infoi.xml" value="0.34629629629629627" />
+        <entry key="app/src/main/res/layout/activity_user_list.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/activity_user_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_user_register.xml" value="0.27447916666666666" />
+        <entry key="app/src/main/res/layout/activity_users_info.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/app_bar_land.xml" value="0.1828774062816616" />
+        <entry key="app/src/main/res/layout/conten_main.xml" value="0.27447916666666666" />
+        <entry key="app/src/main/res/layout/content_land.xml" value="0.1828774062816616" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.2708333333333333" />
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.1828774062816616" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1828774062816616" />
+        <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.1828774062816616" />
+        <entry key="app/src/main/res/layout/lista_actividades1.xml" value="0.1276595744680851" />
+        <entry key="app/src/main/res/layout/menu_header.xml" value="0.2708333333333333" />
+        <entry key="app/src/main/res/layout/nav_header_land.xml" value="0.1828774062816616" />
+        <entry key="app/src/main/res/layout/row_category.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/user_item.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.346875" />
+        <entry key="app/src/main/res/menu/land.xml" value="0.346875" />
+        <entry key="app/src/main/res/menu/nav_menu.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2869791666666667" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2869791666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

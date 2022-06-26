@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PesoActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Toolbar-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:background="@drawable/header_bg">
+
+                <ImageView
+                    android:id="@+id/backBtn"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_back_white" />
+
+            </RelativeLayout>
+
+            <!--Fecha del peso-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nTil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp">
+
+                <TextView
+                    android:id="@+id/dateTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/splash_edittext01"
+                    android:drawableStart="@drawable/ic_calendar_grey"
+                    android:drawablePadding="10dp"
+                    android:hint="dd / mm / yyyyy"
+                    android:textAlignment="center"
+                    android:inputType="date"
+                    android:padding="10dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginEnd="100dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray01" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Peso en Kg-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pesoTil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/pesoKgSet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/splash_edittext01"
+                    android:drawableStart="@drawable/ic_weighht_grey"
+                    android:drawablePadding="10dp"
+                    android:hint="Tu Peso en Kg"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName|textCapWords"
+                    android:padding="8dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginEnd="100dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray01" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ndTil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp">
+
+                <EditText
+                    android:id="@+id/pesoName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginEnd="80dp"
+                    android:background="@drawable/splash_edittext01"
+                    android:drawableStart="@drawable/ic_draw_gray"
+                    android:drawablePadding="10dp"
+                    android:inputType="textPersonName|textCapWords"
+                    android:padding="10dp"
+                    android:hint="Nombre del Registro"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray01" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Register Button -->
+            <Button
+                android:id="@+id/registrarPesoBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/passwordTil"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/button_bg"
+                android:text="Registrar"
+                android:layout_marginStart="80dp"
+                android:layout_marginEnd="80dp"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

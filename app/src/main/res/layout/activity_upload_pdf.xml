@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".uploadPdfActivity">
+
+    <!--Toolbar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/header_bg"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_back_white" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textAlignment="center"
+            android:text="*No olvides que es es necesario \n introducir un nombre para guardar el
+ archivo. \n Ejemplo: MedicionesMarzo2022 \n
+ -1.Pulsa -ELIGE PDF- y escoge el Documento* \n
+-2.Dale nombre al documento  en Nombre del Documento \n
+-3.Pulsa en -SUBIR PDF- y listo!"
+
+            />
+
+        <!--Name-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nicknameTil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp">
+
+
+            <EditText
+                android:id="@+id/docNameEt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/edit_bg"
+                android:drawableStart="@drawable/ic_pdf_gray"
+                android:hint="Nombre del Documento"
+                android:inputType="textPersonName|textCapWords"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray01" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="130dp"
+            android:background="@drawable/button_bg"
+            android:text="Elige pdf"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="130dp"
+            android:background="@drawable/button_bg"
+            android:text="subir pdf"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</LinearLayout>
