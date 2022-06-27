@@ -1,5 +1,6 @@
 package com.example.magiafitapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -17,8 +18,6 @@ class UserInfoiActivity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
 
     private lateinit var binding: ActivityUserInfoiBinding
-
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,12 +40,9 @@ class UserInfoiActivity : AppCompatActivity() {
         }
 
         binding.allusersBtn.setOnClickListener {
-            //val intent : Intent = Intent(this, ::class.java)
-            //startActivity(intent)
-
+            val intent : Intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
-
-
     }
 
     //Funcion que busca los datos del usuario

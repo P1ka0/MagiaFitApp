@@ -13,13 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".RecyclerViewActivity"
             android:exported="false" />
         <activity
             android:name=".FetchDataActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".getUsers"
