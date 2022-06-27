@@ -10,14 +10,14 @@ class MyAdapter (private val userList:ArrayList<User>) : RecyclerView.Adapter<My
 
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
 
-        val tvName: TextView = itemView.findViewById(R.id.name)
-        val tvAddress: TextView = itemView.findViewById(R.id.address)
-        val tvEmail: TextView = itemView.findViewById(R.id.email)
+        val tvName: TextView = itemView.findViewById(R.id.tv_name)
+        val tvAddress: TextView = itemView.findViewById(R.id.tv_address)
+        val tvEmail: TextView = itemView.findViewById(R.id.tv_email)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-       val itemView=
-           LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
+        val itemView=
+            LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
         return MyViewHolder(itemView)
     }
 

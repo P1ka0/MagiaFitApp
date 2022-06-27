@@ -2,10 +2,11 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="10dp"
     android:backgroundTint="@color/white"
+    android:layout_margin="10dp"
     app:cardCornerRadius="8dp"
-    android:layout_height="match_parent">
+    app:cardElevation="8dp"
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,24 +15,23 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textColor="@color/teal_700"
-
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/email"
+            android:id="@+id/tv_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="15sp"
+            android:fontFamily="sans-serif-black"
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/address"
+            android:id="@+id/tv_email"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tv_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView" />

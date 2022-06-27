@@ -43,7 +43,7 @@ class UserInfoiActivity : AppCompatActivity() {
 
         binding.allusersBtn.setOnClickListener {
 
-            startActivity(Intent(this,RecyclerViewActivity::class.java))
+            startActivity(Intent(this,UsersActivity::class.java))
         }
 
 
