@@ -61,8 +61,10 @@
 
                         <ImageView
                             android:id="@+id/userphoto"
-                            android:layout_width="52dp"
-                            android:layout_height="62dp"
+                            android:layout_width="55dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_height="50dp"
                             android:scaleType="centerCrop"
 
                             android:src="@drawable/ic_profile_gray" />

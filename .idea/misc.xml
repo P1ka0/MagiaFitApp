@@ -19,6 +19,7 @@
         <entry key="app/src/main/res/drawable/ic_menu_camera.xml" value="0.33541666666666664" />
         <entry key="app/src/main/res/drawable/ic_menu_gallery.xml" value="0.33541666666666664" />
         <entry key="app/src/main/res/drawable/ic_person_black.xml" value="0.3765625" />
+        <entry key="app/src/main/res/drawable/ic_profile_gray.xml" value="0.15648148148148147" />
         <entry key="app/src/main/res/drawable/ic_reservas_black.xml" value="0.3921875" />
         <entry key="app/src/main/res/drawable/ic_rutine_icon.xml" value="0.275" />
         <entry key="app/src/main/res/drawable/ic_setup_icon.xml" value="0.275" />
@@ -40,8 +41,8 @@
         <entry key="app/src/main/res/layout/activity_circule_test.xml" value="0.18840579710144928" />
         <entry key="app/src/main/res/layout/activity_create_add.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_crono.xml" value="0.2708333333333333" />
-        <entry key="app/src/main/res/layout/activity_dash_board_user.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_dashboard_admin.xml" value="0.24369747899159663" />
+        <entry key="app/src/main/res/layout/activity_dash_board_user.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_dashboard_admin.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_download_pdf.xml" value="0.31431159420289856" />
         <entry key="app/src/main/res/layout/activity_fetch_data.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_files_upload.xml" value="0.28854166666666664" />
