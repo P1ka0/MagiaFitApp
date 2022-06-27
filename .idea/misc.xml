@@ -41,7 +41,7 @@
         <entry key="app/src/main/res/layout/activity_create_add.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_crono.xml" value="0.2708333333333333" />
         <entry key="app/src/main/res/layout/activity_dash_board_user.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_dashboard_admin.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_dashboard_admin.xml" value="0.24369747899159663" />
         <entry key="app/src/main/res/layout/activity_download_pdf.xml" value="0.31431159420289856" />
         <entry key="app/src/main/res/layout/activity_fetch_data.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_files_upload.xml" value="0.28854166666666664" />
@@ -73,8 +73,9 @@
         <entry key="app/src/main/res/layout/activity_user_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_user_register.xml" value="0.27447916666666666" />
         <entry key="app/src/main/res/layout/activity_user_retrieve.xml" value="0.20833333333333334" />
-        <entry key="app/src/main/res/layout/activity_users.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_users.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_users_info.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/activity_view_pdf.xml" value="0.1" />
         <entry key="app/src/main/res/layout/app_bar_land.xml" value="0.1828774062816616" />
         <entry key="app/src/main/res/layout/conten_main.xml" value="0.27447916666666666" />
         <entry key="app/src/main/res/layout/content_land.xml" value="0.1828774062816616" />

@@ -116,7 +116,7 @@ class uploadPdfActivity : AppCompatActivity() {
                pd.show()
 
                //Storage reference
-               val storageReference = FirebaseStorage.getInstance().reference.child("Mediciones/${Nombre}/${docName}.pdf")
+               val storageReference = FirebaseStorage.getInstance().reference.child("Documentos/${Nombre}/${docName}.pdf")
                storageReference.putFile(filepath)
                    .addOnSuccessListener {p0->
                        pd.dismiss()

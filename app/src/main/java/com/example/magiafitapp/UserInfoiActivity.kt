@@ -1,6 +1,5 @@
 package com.example.magiafitapp
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -43,7 +42,7 @@ class UserInfoiActivity : AppCompatActivity() {
 
         binding.allusersBtn.setOnClickListener {
 
-            startActivity(Intent(this,UsersActivity::class.java))
+
         }
 
 

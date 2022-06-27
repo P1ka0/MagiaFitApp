@@ -175,9 +175,11 @@ class RegisterActivity : AppCompatActivity() {
     //Funcion que guarda la informacion de usuario
     private fun updateUserInfo() {
 
+       // val uid = firebaseAuth.uid
+
         val hashMap: HashMap<String, Any?> = HashMap()
 
-       //hashMap["uid"] = uid
+        //hashMap["uid"] = uid
         hashMap["Nick"] = nick
         hashMap["Email"] = email
         hashMap["Password"] = password

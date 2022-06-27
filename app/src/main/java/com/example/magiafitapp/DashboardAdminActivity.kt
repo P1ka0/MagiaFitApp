@@ -150,8 +150,6 @@ class DashboardAdminActivity : AppCompatActivity() {
         }
     }
 
-
-
     //-------------------------User profile photo GET--------------------------------//
 
     private fun userProfileImage(userid: String){
@@ -190,6 +188,7 @@ class DashboardAdminActivity : AppCompatActivity() {
 
         //Open IMC Activity
         binding.uploadDoc.setOnClickListener {
+            intent.putExtra("Nombre", userid)
             startActivity(Intent(this,uploadPdfActivity::class.java))
         }
 
@@ -203,7 +202,12 @@ class DashboardAdminActivity : AppCompatActivity() {
             firebaseAuth.signOut() //Cerramos la sesion desde firebase
             finish() //Cerramos el Activity
             startActivity(Intent(this, LoginActivity::class.java))
+        }
 
+        binding.uploadDoc.setOnClickListener {
+            val intent : Intent = Intent(this,uploadPdfActivity::class.java)
+            intent.putExtra("Nombre",userid)
+            startActivity(intent)
         }
     }
 }
