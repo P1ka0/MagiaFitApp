@@ -1,6 +1,5 @@
 package com.example.magiafitapp
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -42,8 +41,9 @@ class UserInfoiActivity : AppCompatActivity() {
         }
 
         binding.allusersBtn.setOnClickListener {
-            val intent : Intent = Intent(this, RecyclerViewActivity::class.java)
-            startActivity(intent)
+            //val intent : Intent = Intent(this, ::class.java)
+            //startActivity(intent)
+
         }
 
 
