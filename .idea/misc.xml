@@ -47,6 +47,7 @@
         <entry key="app/src/main/res/layout/activity_fetch_data.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_files_upload.xml" value="0.28854166666666664" />
         <entry key="app/src/main/res/layout/activity_forgot_password.xml" value="0.29483695652173914" />
+        <entry key="app/src/main/res/layout/activity_get_users.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/activity_imc_calculator.xml" value="0.25885416666666666" />
         <entry key="app/src/main/res/layout/activity_info_set_get.xml" value="0.37604166666666666" />

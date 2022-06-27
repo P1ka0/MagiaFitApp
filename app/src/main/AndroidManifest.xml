@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.magiafitapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,13 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
         <activity
-            android:name=".UsersActivity"
-            android:exported="false" />
-        <activity
             android:name=".RecyclerViewActivity"
             android:exported="false" />
         <activity
             android:name=".FetchDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".getUsers"
+            android:exported="false" />
+        <activity
+            android:name=".UsersActivity"
             android:exported="false" />
         <activity
             android:name=".UserRetrieveActivity"

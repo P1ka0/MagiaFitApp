@@ -187,6 +187,7 @@ class RegisterActivity : AppCompatActivity() {
         hashMap["Apellido"] = surname
         hashMap["Direccion"] = address
         hashMap["Telefono"] = phone
+        hashMap["Edad"] = "50"
         hashMap["profileImage"] = "" //Dejamos esta vacia, para editarla en el perfil
         hashMap["userType"] = "user"//possible values are user/admin
 
@@ -207,9 +208,9 @@ class RegisterActivity : AppCompatActivity() {
             }
 
         val userMap = hashMapOf(
-            "Nombre" to name,
-            "Apellido" to surname,
-            "Direccion" to address
+            "name" to name,
+            "email" to email,
+            "address" to address
          )
 
         val userId = FirebaseAuth.getInstance().currentUser!!.uid
