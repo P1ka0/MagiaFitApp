@@ -1,7 +1,6 @@
 package com.example.magiafitapp
 
 import android.os.Bundle
-import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        /*
         val backbtn = findViewById<ImageButton>(R.id.backBtn)
 
         backbtn.setOnClickListener {
@@ -30,7 +30,9 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
+         */
 
+        
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
