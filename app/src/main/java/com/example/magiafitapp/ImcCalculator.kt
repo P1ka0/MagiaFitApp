@@ -25,7 +25,7 @@ class ImcCalculator : AppCompatActivity() {
 
         backbtn.setOnClickListener {
             onBackPressed()
-
+            finish()
         }
 
 

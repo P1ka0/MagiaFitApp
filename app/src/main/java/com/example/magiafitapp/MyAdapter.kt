@@ -13,8 +13,7 @@ class MyAdapter (private val userList : ArrayList<User>) : RecyclerView.Adapter<
 
         val tvName: TextView = itemView.findViewById(R.id.tvfirstName)
         val tvAddress: TextView = itemView.findViewById(R.id.tvaddress)
-
-
+        val tvSurname: TextView = itemView.findViewById(R.id.tvsurname)
 
     }
 
@@ -29,6 +28,7 @@ class MyAdapter (private val userList : ArrayList<User>) : RecyclerView.Adapter<
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.tvAddress.text = userList[position].address
         holder.tvName.text = userList[position].name
+        holder.tvSurname.text = userList[position].surname
 
     }
 

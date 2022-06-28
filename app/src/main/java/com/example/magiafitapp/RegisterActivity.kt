@@ -210,7 +210,8 @@ class RegisterActivity : AppCompatActivity() {
         val userMap = hashMapOf(
             "name" to name,
             "email" to email,
-            "address" to address
+            "address" to address,
+            "surname" to surname
          )
 
         val userId = FirebaseAuth.getInstance().currentUser!!.uid
