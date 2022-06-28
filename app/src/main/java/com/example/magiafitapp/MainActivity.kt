@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
          */
 
-        
+
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
