@@ -50,9 +50,11 @@
                 <AutoCompleteTextView
                     android:id="@+id/activity1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="1dp"
+                    android:textAlignment="center"
                     android:keyboardNavigationCluster="false"
+                    android:textSize="12sp"
                     android:hint="Actividad"
                     android:focusable="false"
                     android:inputType="none"
@@ -71,8 +73,10 @@
                 <AutoCompleteTextView
                     android:id="@+id/autoDay1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
                     android:hint="Día"
+                    android:textSize="10sp"
                     android:keyboardNavigationCluster="false"
                     android:focusable="false"
                     android:inputType="none" />
@@ -90,8 +94,10 @@
                 <AutoCompleteTextView
                     android:id="@+id/autoHr1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
                     android:hint="Hora"
+                    android:textSize="12sp"
                     android:focusable="false"
                     android:inputType="none" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -112,8 +118,10 @@
                 <AutoCompleteTextView
                     android:id="@+id/activity2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="1dp"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
                     android:hint="Actividad"
                     android:keyboardNavigationCluster="false"
                     android:focusable="false"
@@ -133,7 +141,9 @@
                 <AutoCompleteTextView
                     android:id="@+id/autoDay2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
                     android:hint="Día"
                     android:keyboardNavigationCluster="false"
                     android:focusable="false"
@@ -152,8 +162,10 @@
                 <AutoCompleteTextView
                     android:id="@+id/autoHr2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:focusable="false"
+                    android:textSize="12sp"
+                    android:textAlignment="center"
                     android:keyboardNavigationCluster="false"
                     android:hint="Hora"
                     android:inputType="none" />
@@ -175,9 +187,11 @@
                 <AutoCompleteTextView
                     android:id="@+id/activity3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="1dp"
                     android:hint="Actividad"
+                    android:textSize="12sp"
+                    android:textAlignment="center"
                     android:keyboardNavigationCluster="false"
                     android:focusable="false"
                     android:inputType="none" />
@@ -196,8 +210,10 @@
                 <AutoCompleteTextView
                     android:id="@+id/autoDay3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:hint="Día"
+                    android:textSize="12sp"
+                    android:textAlignment="center"
                     android:keyboardNavigationCluster="false"
                     android:focusable="false"
                     android:inputType="none" />
@@ -215,9 +231,11 @@
                 <AutoCompleteTextView
                     android:id="@+id/autoHr3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:focusable="false"
                     android:hint="Hora"
+                    android:textSize="12sp"
+                    android:textAlignment="center"
                     android:keyboardNavigationCluster="false"
                     android:inputType="none" />
             </com.google.android.material.textfield.TextInputLayout>

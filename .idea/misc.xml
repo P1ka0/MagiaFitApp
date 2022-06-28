@@ -85,11 +85,13 @@
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.1828774062816616" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1828774062816616" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.1828774062816616" />
+        <entry key="app/src/main/res/layout/item_row.xml" value="0.1828774062816616" />
         <entry key="app/src/main/res/layout/list_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/lista_actividades1.xml" value="0.1276595744680851" />
         <entry key="app/src/main/res/layout/menu_header.xml" value="0.2708333333333333" />
         <entry key="app/src/main/res/layout/nav_header_land.xml" value="0.1828774062816616" />
         <entry key="app/src/main/res/layout/row_category.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/tarjeta_layout.xml" value="0.15185185185185185" />
         <entry key="app/src/main/res/layout/user_item.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.346875" />
         <entry key="app/src/main/res/menu/land.xml" value="0.346875" />
