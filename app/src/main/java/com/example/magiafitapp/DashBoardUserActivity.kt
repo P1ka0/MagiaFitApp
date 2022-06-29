@@ -18,7 +18,6 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import java.io.File
 
-
 class DashBoardUserActivity : AppCompatActivity(){
 
     private lateinit var binding: ActivityDashBoardUserBinding
@@ -35,7 +34,6 @@ class DashBoardUserActivity : AppCompatActivity(){
         binding = ActivityDashBoardUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         //-----------------LLamada al id Usuario--------------------//
         val objetoIntent: Intent = intent
         val Nombre = objetoIntent.getStringExtra("Nombre")
@@ -48,13 +46,11 @@ class DashBoardUserActivity : AppCompatActivity(){
         subtitle.text = userid
         //-----------------Fin LLamada al id Usuario--------------------//
 
-
         //Inicio de Firebase Auth
         auth = FirebaseAuth.getInstance()
 
         //LLamada funcion de los botones y se pasa el parametro del id
         ButtonsSetup(userid)
-
 
         //Dialogo de alerta
         dialog = AlertDialog.Builder(this)
@@ -74,7 +70,6 @@ class DashBoardUserActivity : AppCompatActivity(){
     }
 
     //----------Funcion para seleccionar foto de perfil----------//
-
     private fun PickImageBtn(){
         binding.userphoto.setOnClickListener{
             val dialog = AlertDialog.Builder(this)
@@ -83,7 +78,6 @@ class DashBoardUserActivity : AppCompatActivity(){
                 .setNegativeButton("CANCELAR"){view, _->
                     view.dismiss()
                 }
-
                 .setPositiveButton("ELEGIR FOTO"){view,_ ->
                     startFileChooser()
                     Toast.makeText(this,"Has escogido elegir foto", Toast.LENGTH_SHORT).show()
@@ -95,8 +89,6 @@ class DashBoardUserActivity : AppCompatActivity(){
     }
 
     //--------------------UploadImage Function------------------------------//
-
-
     private fun startFileChooser() {
         var i = Intent()
         i.setType("image/*")
@@ -117,7 +109,7 @@ class DashBoardUserActivity : AppCompatActivity(){
         val useride = "$Nombre"
         subtitle.text = useride
 
-
+        //Codigo de respuesta para el filepath
         if (requestCode==111 && resultCode == Activity.RESULT_OK && data != null){
             filepath = data.data!!
             var bitmap = MediaStore.Images.Media.getBitmap(contentResolver, filepath)
@@ -126,8 +118,8 @@ class DashBoardUserActivity : AppCompatActivity(){
         }
     }
 
+    //Funcion de subida de archivo
     private fun uploadFile(useride: String) {
-
         if (filepath != null){
             val pd = ProgressDialog(this)
             pd.setTitle("Uploading")
@@ -151,12 +143,8 @@ class DashBoardUserActivity : AppCompatActivity(){
         }
     }
 
-
-
     //-------------------------User profile photo GET--------------------------------//
-
     private fun userProfileImage(userid: String){
-
         val progressDialog = ProgressDialog(this)
         progressDialog.setMessage("Cargando Perfil...")
         progressDialog.setCancelable(false)
@@ -167,7 +155,6 @@ class DashBoardUserActivity : AppCompatActivity(){
 
         val localFile = File.createTempFile("tempImage","jpg")
         storageRef.getFile(localFile).addOnSuccessListener {
-
             if (progressDialog.isShowing)
                 progressDialog.dismiss()
 
@@ -175,7 +162,6 @@ class DashBoardUserActivity : AppCompatActivity(){
             binding.userphoto.setImageBitmap(bitmap)
 
         }.addOnFailureListener{
-
             if (progressDialog.isShowing)
                 progressDialog.dismiss()
 
@@ -190,18 +176,14 @@ class DashBoardUserActivity : AppCompatActivity(){
 
         //Open Peso Activity
         binding.pesoActivity.setOnClickListener {
-
             val intent : Intent = Intent(this,PesoActivity::class.java)
             intent.putExtra("Nombre",userid)
             startActivity(intent)
-
-
         }
 
         //Open IMC Activity
         binding.openImcButton.setOnClickListener {
             startActivity(Intent(this,ImcCalculator::class.java))
-
         }
 
         //Boton de cerrar sesion
@@ -211,12 +193,14 @@ class DashBoardUserActivity : AppCompatActivity(){
             startActivity(Intent(this, LoginActivity::class.java))
         }
 
+        //Boton para abrir las reservas
         binding.reservasBtn.setOnClickListener {
             val intent : Intent = Intent(this,BookerActivity::class.java)
             intent.putExtra("Nombre",userid)
             startActivity(intent)
         }
 
+        //Boton que abre subir documentos PDF
         binding.userPdfUp.setOnClickListener {
             val intent : Intent = Intent(this,uploadPdfActivity::class.java)
             intent.putExtra("Nombre",userid)
